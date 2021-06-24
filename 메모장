@@ -1,0 +1,2 @@
+// nodemon 실행 명령어
+npx nodemon src/index.ts
