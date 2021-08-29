@@ -17,7 +17,7 @@ export const signUp = async (req: Request, res: Response): Promise<void> => {
       if (!password.length || !name.length || !email.length) {
         res.status(404).send({ message: "빈 칸을 모두 채워주세요." });
       }
-      await bcryptjs.hash(password, 10, (err, hash) => {
+      bcryptjs.hash(password, 10, (err, hash) => {
         if (err) {
           return res.status(401).send({
             message: "Error has occured",

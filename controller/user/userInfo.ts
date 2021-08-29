@@ -9,7 +9,7 @@ export const userInfoPost = async (
 ): Promise<any> => {
   try {
     const userInfo = await verifyAccessToken(req);
-    if (!(<any>userInfo).email) {
+    if (!userInfo) {
       return res
         .status(409)
         .send({ message: "유효하지 않은 access token 입니다." });
