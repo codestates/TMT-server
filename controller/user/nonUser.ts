@@ -25,7 +25,6 @@ export const nonUser = async (req: Request, res: Response): Promise<void> => {
           accessToken: accessToken,
           name: newRandom.name,
           email: newRandom.email,
-          password: newRandom.password,
         });
       })
       .catch((err) => {

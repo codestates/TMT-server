@@ -40,7 +40,6 @@ export const withdrawal = async (req: Request, res: Response): Promise<any> => {
         message: "탈퇴가 성공적으로 완료되었습니다.",
       });
     }
-
   } catch (err) {
     res.send({
       "error message": err,
